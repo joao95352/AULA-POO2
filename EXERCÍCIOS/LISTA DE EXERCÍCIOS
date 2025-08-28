@@ -1,1 +1,7 @@
+LISTA DE EXERCÍCIOS. O ALUNO DEVE FAZER TODOS E UPAR DENTRO DA PASTA EXERCÍCIOS DO GITHUB COM SEU NOME NA PASTA, DENTRO DA PASTA DEVE CONTER TODOS OS 5 EXERCÍCIOS
 
+1. Crie uma classe Livro com @property para estoque que proíba números negativos.
+2. Crie uma classe Relogio que sobrecarregue __str__ para mostrar HH:MM.
+3. Faça uma classe ListaDeTarefas que funcione com len(), for e tarefas[i].
+4. Crie uma classe abstrata Forma com método area() e implemente Quadrado.
+5. Crie um “abre/fecha” simples com with que registre “Começo” e “Fim” num arquivo.
