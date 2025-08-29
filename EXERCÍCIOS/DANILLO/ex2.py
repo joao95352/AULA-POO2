@@ -1,0 +1,10 @@
+class Relogio:
+    def __init__(self, hora, minuto):
+        self.hora = hora
+        self.minuto = minuto
+
+    def __str__(self):
+        return f"{self.hora:02d}:{self.minuto:02d}"
+
+r = Relogio(9, 5)
+print(r)  
