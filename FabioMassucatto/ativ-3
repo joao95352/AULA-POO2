@@ -1,0 +1,29 @@
+class Lista_De_Tarefas:
+    def __init__(self):
+        self._tarefas = []
+
+    def adicionar(self, tarefa):
+        self._tarefas.append(tarefa)
+
+    def __len__(self):
+        return len(self._tarefas)
+
+    def __getitem__(self, index):
+        return self._tarefas[index]
+
+    def __iter__(self):
+        return iter(self._tarefas)
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    tarefas = Lista_De_Tarefas()
+    tarefas.adicionar("Estudar Python")
+    tarefas.adicionar("Fazer exercícios")
+    tarefas.adicionar("Ler um livro")
+
+    print(f"Total de tarefas: {len(tarefas)}")
+
+    for tarefa in tarefas:
+        print(tarefa)
+
+    print("Primeira tarefa:", tarefas[0])

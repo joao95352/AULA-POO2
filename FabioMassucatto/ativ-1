@@ -1,0 +1,23 @@
+class Livro:
+    def __init__(self, titulo, autor, estoque):
+        self.titulo = titulo
+        self.autor = autor
+        self._estoque = 0
+        self.estoque = estoque  # Usa o setter para validar
+
+    @property
+    def estoque(self):
+        return self._estoque
+
+    @estoque.setter
+    def estoque(self, valor):
+        if valor < 0:
+            raise ValueError("O estoque não pode ser negativo.")
+        self._estoque = valor
+
+
+if __name__ == "__main__":
+    livro = Livro("Dom Casmurro", "Machado de Assis", 1)
+    print(f"Título: {livro.titulo}")
+    print(f"Autor: {livro.autor}")
+    print(f"Estoque: {livro.estoque}")

@@ -1,0 +1,17 @@
+class AbreFecha:
+    def __init__(self, arquivo):
+        self.arquivo = arquivo
+
+    def __enter__(self):
+        self.f = open(self.arquivo, "a", encoding="utf-8")
+        self.f.write("Começo\n")
+        return self.f
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.f.write("Fim\n")
+        self.f.close()
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    with AbreFecha("log.txt") as f:
+        f.write("Executando algo...\n")
