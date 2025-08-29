@@ -1,0 +1,26 @@
+#5. Crie um “abre/fecha” simples com with que registre “Começo” e “Fim” num arquivo.
+
+class AbreFecha:
+    def __init__(self, caminho, modo='a', encoding='utf-8'):
+        self.caminho = caminho
+        self.modo = modo
+        self.encoding = encoding
+        self.arquivo = None
+
+    def __enter__(self):
+        self.arquivo = open(self.caminho, self.modo, encoding=self.encoding)
+        self.arquivo.write("Começo\n")
+        self.arquivo.flush()
+        return self.arquivo  # você pode usar 'f' para escrever dentro do with
+
+    def __exit__(self, exc_type, exc, tb):
+        try:
+            self.arquivo.write("Fim\n")
+        finally:
+            self.arquivo.close()
+        return False  # não suprimir exceções
+
+# Exemplo de uso:
+with AbreFecha("registro.txt") as f:
+    f.write("Alguma linha no meio...\n")
+    print("Alguma linha no meio...")  # Apenas para mostrar que estamos dentro do bloco
