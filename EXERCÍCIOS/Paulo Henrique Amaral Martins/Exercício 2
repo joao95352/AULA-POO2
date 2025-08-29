@@ -1,0 +1,14 @@
+#2. Crie uma classe Relogio que sobrecarregue __str__ para mostrar HH:MM.
+
+class Relogio:
+    def __init__(self, hora, minuto):
+        self.hora = hora
+        self.minuto = minuto
+
+    def __str__(self):
+        return f"{self.hora:02d}:{self.minuto:02d}"
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    relogio = Relogio(9, 5)
+    print(relogio)  # Saída: 09:05

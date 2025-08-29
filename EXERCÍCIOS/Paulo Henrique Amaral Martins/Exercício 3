@@ -1,0 +1,31 @@
+#3. Faça uma classe ListaDeTarefas que funcione com len(), for e tarefas[i].
+
+class ListaDeTarefas:
+    def __init__(self):
+        self.tarefas = []
+
+    def adicionar(self, tarefa):
+        self.tarefas.append(tarefa)
+
+    def __len__(self):
+        return len(self.tarefas)
+
+    def __getitem__(self, index):
+        return self.tarefas[index]
+
+    def __iter__(self):
+        return iter(self.tarefas)
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    lista = ListaDeTarefas()
+    lista.adicionar("Xingar o Fabim")
+    lista.adicionar("Humilhar o Fabim")
+    lista.adicionar("Rir com ele o fabim é legal")
+
+    print(f"Total de tarefas: {len(lista)}")
+
+    for tarefa in lista:
+        print(f"- {tarefa}")
+
+    print(f"Primeira tarefa: {lista[0]}")

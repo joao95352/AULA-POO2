@@ -1,0 +1,29 @@
+#1. Crie uma classe Livro com @property para estoque que proíba números negativos.
+
+class Livro:
+    def __init__(self, titulo, inventario=0):
+        self.titulo = titulo
+        self._inventario = 0
+        self.inventario = inventario  # Usa o setter para validar
+
+    @property
+    def inventario(self):
+        return self._inventario
+
+    @inventario.setter
+    def inventario(self, valor):
+        if valor < 0:
+            raise ValueError("O inventario não pode ser negativo.")
+        self._inventario = valor
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    livro = Livro("Fabim caindo de moto", 5)
+    print(f"Título: {livro.titulo}")
+    print(f"Inventário: {livro.inventario}")
+
+    # Testando valor negativo
+    try:
+        livro.inventario = -3
+    except ValueError as e:
+        print(e)
