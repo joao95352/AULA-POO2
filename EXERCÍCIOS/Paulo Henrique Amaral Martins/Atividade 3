@@ -1,4 +1,4 @@
-#3. Faça uma classe ListaDeTarefas que funcione com len(), for e tarefas[i].
+# 3. Faça uma classe ListaDeTarefas que funcione com len(), for e tarefas[i].
 
 class ListaDeTarefas:
     def __init__(self):
@@ -19,9 +19,9 @@ class ListaDeTarefas:
 # Exemplo de uso:
 if __name__ == "__main__":
     lista = ListaDeTarefas()
-    lista.adicionar("Xingar o Fabim")
-    lista.adicionar("Humilhar o Fabim")
-    lista.adicionar("Rir com ele o fabim é legal")
+    lista.adicionar("Rir da calvice do heitor")
+    lista.adicionar("Rir do fabim")
+    lista.adicionar("N esquecer de chamar o bahia de bahia")
 
     print(f"Total de tarefas: {len(lista)}")
 

@@ -18,7 +18,7 @@ class Livro:
 
 # Exemplo de uso:
 if __name__ == "__main__":
-    livro = Livro("Fabim caindo de moto", 5)
+    livro = Livro("A saga do fabim", 5)
     print(f"Título: {livro.titulo}")
     print(f"Inventário: {livro.inventario}")
 

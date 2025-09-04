@@ -1,4 +1,4 @@
-#4. Crie uma classe abstrata Forma com método area() e implemente Quadrado.
+# 4. Crie uma classe abstrata Forma com método area() e implemente Quadrado.
 
 from abc import ABC, abstractmethod
 
@@ -16,5 +16,5 @@ class Quadrado(Forma):
 
 # Exemplo de uso:
 if __name__ == "__main__":
-    q = Quadrado(4)
+    q = Quadrado(5)
     print(f"Área do quadrado: {q.area()}")
