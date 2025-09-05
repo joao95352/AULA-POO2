@@ -1,0 +1,3 @@
+Começo
+Dentro do bloco
+Fim
